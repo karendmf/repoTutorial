@@ -1,11 +1,21 @@
 <div *ngIf="producto">
-    <h2>{{ producto.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{producto.id}}</div>
+    <h2>{{ producto.name | uppercase }}</h2>
+    <!-- <div><span>id: </span>{{producto.id}}</div> -->
     <div>
-      <label>name:
-        <input [(ngModel)]="producto.name" placeholder="name"/>
+      <label>Nombre de la Miel:
+        <input [(ngModel)]="producto.name" placeholder="Ej. Miel de Trebol"/>
       </label>
     </div>
-    <button (click)="goBack()">go back</button>
-    <button (click)="save()">save</button>
+    <div>
+      <label>Descripcion de la Miel:
+        <input [(ngModel)]="producto.details" placeholder="Ej. Procedente de la flor de trébol"/>
+      </label>
+    </div>
+    <div>
+      <label>Precio:
+        <input [(ngModel)]="producto.price" placeholder="Ej. 148"/>
+      </label>
+    </div>
+    <button (click)="goBack()">Atras</button>
+    <button (click)="save()">Guardar</button>
   </div>
