@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Producto } from '../producto';
 import { ProductoService } from '../producto.service';
+import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-view',
@@ -20,4 +21,6 @@ export class ViewComponent implements OnInit {
     this.productoService.getProductos()
       .subscribe(productos => this.productos = productos.slice());
   }
+}
+export class NgbdPopoverBasic {
 }

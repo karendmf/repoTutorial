@@ -1,13 +1,18 @@
 <div class="container">
-<h3 align="center">Ofertas</h3>
+<h3 align="center">Ultimas novedades!</h3>
 <div class="row">
-  <a *ngFor="let producto of productos" class="col-md-3"
-      routerLink="/detail/{{producto.id}}">
-    <div class="module producto">
-      <h4>{{producto.name}}</h4>
-    </div>
-  </a>
-</div>
-
-<app-producto-search></app-producto-search>
+    <div *ngFor="let producto of productos | slice:-4:end" class="col-md-3" >
+      <div class="card border-warning" >
+        <img class="card-img-top" src="../../assets/img/size.svg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.name}} <span class="badge badge-secondary">New</span></h5>
+          <p class="card-text"></p>
+          <button type="button" class="btn btn-outline-secondary mr-3" triggers="mouseenter:mouseleave" placement="top"
+          ngbPopover="{{producto.details}}" popoverTitle="Precio: ${{producto.price}}" >
+          M&aacute;s info!
+          </button>
+        </div>
+      </div><br>
+    </div> 
+  </div>
 </div>

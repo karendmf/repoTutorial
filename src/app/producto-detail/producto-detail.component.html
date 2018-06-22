@@ -1,21 +1,20 @@
 <div *ngIf="producto">
     <h2>{{ producto.name | uppercase }}</h2>
     <!-- <div><span>id: </span>{{producto.id}}</div> -->
-    <div>
-      <label>Nombre de la Miel:
-        <input [(ngModel)]="producto.name" placeholder="Ej. Miel de Trebol"/>
-      </label>
+    <div class="form-group">
+      <label for="nombre">Nombre de la Miel:</label>
+      <input class="form-control" [(ngModel)]="producto.name" placeholder="Ej. Miel de Trebol" id="nombre">
     </div>
-    <div>
-      <label>Descripcion de la Miel:
-        <input [(ngModel)]="producto.details" placeholder="Ej. Procedente de la flor de trébol"/>
-      </label>
+    <div class="form-group">
+      <label for="descripcion">Descripcion de la Miel:</label>
+      <textarea class="form-control" [(ngModel)]="producto.details" placeholder="Ej. Procedente de la flor de trébol" rows="4" id="descripcion"></textarea>
+      
     </div>
-    <div>
-      <label>Precio:
-        <input [(ngModel)]="producto.price" placeholder="Ej. 148"/>
-      </label>
+    <div class="form-group">
+      <label for="precio">Precio:</label>
+      <input class="form-control" [(ngModel)]="producto.price" placeholder="Ej. 148" id="precio">
     </div>
-    <button (click)="goBack()">Atras</button>
-    <button (click)="save()">Guardar</button>
+    <button type="button" class="btn btn-info" (click)="save()">Guardar</button> &nbsp;
+    <button type="button" class="btn btn-info" (click)="goBack()">Atras</button>
+    
   </div>

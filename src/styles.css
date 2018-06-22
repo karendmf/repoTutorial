@@ -7,7 +7,7 @@
 }
 
 
-ul li {
+.navbar ul li {
     margin-left: 50px;
     margin-top: 50px;
 }
@@ -29,8 +29,11 @@ ul li {
 .fa:hover{
 	color: #FFDFAD !important;
 }
-.active{
+.navbar .active{
 	border-bottom: solid 1px #EAB766;
+}
+a, a:hover{
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 991px) {
@@ -41,4 +44,13 @@ ul li {
         margin-left: 12px;
         margin-top: 10px;
     }
+}
+button {
+    background-color:#EAB766 !important;
+    color: white !important;
+    border: none !important;
+  }
+  
+button:hover {
+    background-color: #FFDFAD !important;
 }

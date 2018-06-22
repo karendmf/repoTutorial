@@ -1,14 +1,20 @@
-<h3>Nuestras Mieles:</h3>
+<h2>Nuestras Mieles</h2>
+<hr>
 
 <button class="btn btn-info" routerLink="/productos">Administrar productos</button>
-<div class="grid grid-pad">
-  <div *ngFor="let producto of productos" class="col-1-4" >
-    <!-- routerLink="/detail/{{producto.id}}" se comenta Link que redir. a form produto-derail (editar). 
-        Podria redireccionar a detalles de producto en un futuro-->
-    <div class="module producto">
-      <h4>{{producto.name}}</h4>
-      <p>{{producto.details}}</p> 
-      <strong>{{producto.price}}</strong>
-    </div>
+<br><br>
+<div class="row">
+  <div *ngFor="let producto of productos" class="col-md-3" >
+    <div class="card border-warning" >
+      <img class="card-img-top" src="../../assets/img/size.svg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{producto.name}}</h5>
+        <p class="card-text"></p>
+        <button type="button" class="btn btn-outline-secondary mr-3" triggers="mouseenter:mouseleave" placement="top"
+        ngbPopover="{{producto.details}}" popoverTitle="Precio: ${{producto.price}}" >
+        M&aacute;s info!
+        </button>
+      </div>
+    </div><br>
   </div> 
 </div>

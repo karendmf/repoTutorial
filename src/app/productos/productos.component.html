@@ -1,28 +1,39 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/view">Ver productos</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Administrar</li>
+  </ol>
+</nav>
 <h2>Administrar productos</h2>
 <br>
 <div class="row">
-<div class="col-md-6">
-  <h4>Nuevo producto</h4>
-  <label>Nombre:
-    <input #productoName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <br>
-  <button class="btn btn-info" (click)="add(productoName.value); productoName.value=''">
-    Agregar
-  </button>
-</div>
+  <div class="col-md-6">
+      
+    <app-producto-search></app-producto-search>
+    <hr> 
+    <h4>Nuevo producto</h4>
+    <div class="form-group">
+      <label for="crearNombre">Nombre: </label>
+      <input class="form-control" #productoName id='crearNombre' />
+    </div>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="btn btn-info" (click)="add(productoName.value); productoName.value=''">
+      Agregar
+    </button>
+    <br><br>
+  </div>
 
-<div class="col-md-6">
-<h4>Lista de productos:</h4>
-<ul class="productos">
-  <li *ngFor="let producto of productos">
-    <a routerLink="/detail/{{producto.id}}">
-      <span class="badge">{{producto.id}}</span> {{producto.name}}
-    </a>
-    <button class="delete" title="delete producto"
-    (click)="delete(producto)">x</button>
-  </li>
-</ul>
-</div>
+  <div class="col-md-6">
+    <h4>Lista de productos</h4>
+    <ul class="productos">
+      <li *ngFor="let producto of productos">
+        <a routerLink="/detail/{{producto.id}}">
+          <span class="badge">{{producto.id}}</span> {{producto.name}}
+        </a>
+        <button class="delete" title="delete producto" (click)="delete(producto)">X</button>
+      </li>
+    </ul>
+  </div>
 </div>

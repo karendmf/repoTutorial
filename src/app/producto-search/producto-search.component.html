@@ -1,13 +1,10 @@
-<div id="search-component">
+<div>
     <h4>Buscar Miel</h4>
+    <input class="form-control" #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
   
-    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-  
-    <ul class="search-result">
-      <li *ngFor="let producto of productos$ | async" >
-        <a routerLink="/detail/{{producto.id}}">
+    <div class="list-group search-result">
+      <a *ngFor="let producto of productos$ | async" class="list-group-item" routerLink="/detail/{{producto.id}}">
           {{producto.name}}
-        </a>
-      </li>
-    </ul>
+      </a>
+    </div>
   </div>
