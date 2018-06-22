@@ -1,13 +1,9 @@
-<div class="container">
-<h3 align="center">Ofertas</h3>
-<div class="row">
-  <a *ngFor="let producto of productos" class="col-md-3"
+<h3>Mieles Populares</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let producto of productos" class="col-1-4"
       routerLink="/detail/{{producto.id}}">
     <div class="module producto">
       <h4>{{producto.name}}</h4>
     </div>
   </a>
-</div>
-
-<app-producto-search></app-producto-search>
 </div>

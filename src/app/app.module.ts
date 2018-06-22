@@ -11,8 +11,6 @@ import { ProductoDetailComponent }  from './producto-detail/producto-detail.comp
 import { ProductosComponent }      from './productos/productos.component';
 import { ProductoSearchComponent }  from './producto-search/producto-search.component';
 import { MessagesComponent }    from './messages/messages.component';
-import { AppNavbarComponent } from './app-navbar/app-navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewComponent }    from './view/view.component';
 
 @NgModule({
@@ -21,7 +19,7 @@ import { ViewComponent }    from './view/view.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule.forRoot(),
+
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -36,7 +34,6 @@ import { ViewComponent }    from './view/view.component';
     ProductoDetailComponent,
     MessagesComponent,
     ProductoSearchComponent,
-    AppNavbarComponent
     ViewComponent
   ],
   bootstrap: [ AppComponent ]
