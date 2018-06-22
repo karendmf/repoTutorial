@@ -30,7 +30,7 @@ export class ProductoService {
   }
 
   /** GET hero by id. Return `undefined` when id not found */
-  getHeroNo404<Data>(id: number): Observable<Producto> {
+  getProductoNo404<Data>(id: number): Observable<Producto> {
     const url = `${this.productosUrl}/?id=${id}`;
     return this.http.get<Producto[]>(url)
       .pipe(
