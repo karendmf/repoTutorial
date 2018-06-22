@@ -36,7 +36,7 @@ import { ViewComponent }    from './view/view.component';
     ProductoDetailComponent,
     MessagesComponent,
     ProductoSearchComponent,
-    AppNavbarComponent
+    AppNavbarComponent,
     ViewComponent
   ],
   bootstrap: [ AppComponent ]

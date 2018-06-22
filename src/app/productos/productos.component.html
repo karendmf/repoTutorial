@@ -1,15 +1,20 @@
-<h2>My Heroes</h2>
-
-<div>
-  <label>Hero name:
+<h2>Administrar productos</h2>
+<br>
+<div class="row">
+<div class="col-md-6">
+  <h4>Nuevo producto</h4>
+  <label>Nombre:
     <input #productoName />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(productoName.value); productoName.value=''">
-    add
+  <br>
+  <button class="btn btn-info" (click)="add(productoName.value); productoName.value=''">
+    Agregar
   </button>
 </div>
 
+<div class="col-md-6">
+<h4>Lista de productos:</h4>
 <ul class="productos">
   <li *ngFor="let producto of productos">
     <a routerLink="/detail/{{producto.id}}">
@@ -19,3 +24,5 @@
     (click)="delete(producto)">x</button>
   </li>
 </ul>
+</div>
+</div>

@@ -1,12 +1,14 @@
 <h3>Nuestras Mieles:</h3>
+
+<button class="btn btn-info" routerLink="/productos">Administrar productos</button>
 <div class="grid grid-pad">
-  <!-- <a *ngFor="let producto of productos" class="col-1-4" routerLink="/detail/{{producto.id}}"> --> 
-    <!-- se comenta Link que redir. a form produto-derail (editar). 
+  <div *ngFor="let producto of productos" class="col-1-4" >
+    <!-- routerLink="/detail/{{producto.id}}" se comenta Link que redir. a form produto-derail (editar). 
         Podria redireccionar a detalles de producto en un futuro-->
     <div class="module producto">
       <h4>{{producto.name}}</h4>
       <p>{{producto.details}}</p> 
       <strong>{{producto.price}}</strong>
     </div>
-  <!-- </a> -->
+  </div> 
 </div>

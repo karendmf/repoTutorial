@@ -51,13 +51,12 @@
 }
 
 button {
-  background-color: #eee;
+  background-color:#EAB766;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   cursor: hand;
-  font-family: Arial;
 }
 
 button:hover {
