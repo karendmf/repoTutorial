@@ -11,6 +11,7 @@ import { ProductoDetailComponent }  from './producto-detail/producto-detail.comp
 import { ProductosComponent }      from './productos/productos.component';
 import { ProductoSearchComponent }  from './producto-search/producto-search.component';
 import { MessagesComponent }    from './messages/messages.component';
+import { ViewComponent }    from './view/view.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { MessagesComponent }    from './messages/messages.component';
     ProductosComponent,
     ProductoDetailComponent,
     MessagesComponent,
-    ProductoSearchComponent
+    ProductoSearchComponent,
+    ViewComponent
   ],
   bootstrap: [ AppComponent ]
 })
