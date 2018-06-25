@@ -22,10 +22,11 @@ export class ProductosComponent implements OnInit {
     .subscribe(productos => this.productos = productos);
   }
 
-  add(name: string): void {
+  add(name: string, img: string): void {
     name = name.trim();
+    img = "../../assets/img/size.jpg";
     if (!name) { return; }
-    this.productoService.addProducto({ name } as Producto)
+    this.productoService.addProducto({ name, img } as Producto)
       .subscribe(producto => {
         this.productos.push(producto);
       });

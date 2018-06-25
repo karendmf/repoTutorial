@@ -69,7 +69,7 @@ export class ProductoService {
   /** POST: add a new hero to the server */
   addProducto (producto: Producto): Observable<Producto> {
     return this.http.post<Producto>(this.productosUrl, producto, httpOptions).pipe(
-      tap((producto: Producto) => this.log(`added producto w/ id=${producto.id}`)),
+      tap((producto: Producto) => this.log(`Nuevo producto agregado: ${producto.name}`)),
       catchError(this.handleError<Producto>('addProducto'))
     );
   }
@@ -80,7 +80,7 @@ export class ProductoService {
     const url = `${this.productosUrl}/${id}`;
 
     return this.http.delete<Producto>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted producto id=${id}`)),
+      tap(_ => this.log(`Producto eliminado`)),
       catchError(this.handleError<Producto>('deleteProducto'))
     );
   }
@@ -88,7 +88,7 @@ export class ProductoService {
   /** PUT: update the hero on the server */
   updateProducto (producto: Producto): Observable<any> {
     return this.http.put(this.productosUrl, producto, httpOptions).pipe(
-      tap(_ => this.log(`updated producto id=${producto.id}`)),
+      tap(_ => this.log(`Producto actualizado id: ${producto.id}`)),
       catchError(this.handleError<any>('updateProducto'))
     );
   }

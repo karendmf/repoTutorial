@@ -3,5 +3,6 @@ export class Producto {
     name: string;
     details: string;
     price: number;
+    img: string;
   }
   //tipo de datos que tendra la clase, se podra usar para validar formularios
