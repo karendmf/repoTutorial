@@ -1,0 +1,17 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 60px;
+  background-color: rgb(31, 31, 31);
+  color: #EAB766;
+}
+
+.footer .fa {
+  padding-left: 15px;
+  padding-right: 6px;
+}
+
+.footer div {
+  text-align: center;
+}

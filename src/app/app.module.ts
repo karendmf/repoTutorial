@@ -15,6 +15,7 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewComponent }    from './view/view.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     ProductoSearchComponent,
     AppNavbarComponent,
     ViewComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    FooterComponent
   ],
   bootstrap: [ AppComponent ]
 })

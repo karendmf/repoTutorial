@@ -7,7 +7,15 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
-
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+	
+}
 /*body {
         background: url(assets/img/fondo.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
@@ -28,6 +36,7 @@
 
 .navbar {
   font-weight: 500;
+  background-color: rgb(31, 31, 31);
 }
 
 .navbar-nav>li>a {

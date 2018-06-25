@@ -1,0 +1,9 @@
+#jumbo2{
+    background-color: rgb(31, 31, 31) !important;
+    padding: 30px;
+}
+.jumbotron{
+	background-color: rgb(231, 219, 151) !important;
+    color: black;
+    padding: 30px;
+}
