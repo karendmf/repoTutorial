@@ -14,6 +14,7 @@ import { MessagesComponent }    from './messages/messages.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewComponent }    from './view/view.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { ViewComponent }    from './view/view.component';
     MessagesComponent,
     ProductoSearchComponent,
     AppNavbarComponent,
-    ViewComponent
+    ViewComponent,
+    NosotrosComponent
   ],
   bootstrap: [ AppComponent ]
 })

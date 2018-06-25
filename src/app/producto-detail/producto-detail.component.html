@@ -9,12 +9,12 @@
     <div class="form-group">
       <label for="descripcion">Descripcion de la Miel:</label>
       <textarea class="form-control" [(ngModel)]="producto.details" placeholder="Ej. Procedente de la flor de trébol" rows="4" id="descripcion"></textarea>
-      
     </div>
     <div class="form-group">
       <label for="precio">Precio:</label>
       <input class="form-control" [(ngModel)]="producto.price" placeholder="Ej. 148" id="precio">
     </div>
+
     <button type="button" class="btn btn-info" (click)="save()">Guardar</button> &nbsp;
     <button type="button" class="btn btn-info" (click)="goBack()">Atras</button>
     

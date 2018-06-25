@@ -4,6 +4,7 @@ import { ProductosComponent }      from './productos/productos.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { ViewComponent }   from './view/view.component';
 import { ProductoDetailComponent }  from './producto-detail/producto-detail.component';
+import { NosotrosComponent }   from './nosotros/nosotros.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'view', component: ViewComponent },
   { path: 'detail/:id', component: ProductoDetailComponent },
+  { path: 'nosotros', component: NosotrosComponent },
   
 ];
 
