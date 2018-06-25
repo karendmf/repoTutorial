@@ -7,7 +7,7 @@ import {debounceTime} from 'rxjs/operators';
   providedIn: 'root',
 })
 export class MessageService {
-  staticAlertClosed = false;
+
   messages: string[] = [];
   type: 'warning';
   add(message: string) {
@@ -16,8 +16,5 @@ export class MessageService {
 
   clear() {
     this.messages = [];
-  }
-  ngOnInit(): void {
-    setTimeout(() => this.staticAlertClosed = true, 1000);
   }
 }

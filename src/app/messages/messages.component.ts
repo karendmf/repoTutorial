@@ -10,8 +10,8 @@ export class MessagesComponent implements OnInit {
   staticAlertClosed = false;
   constructor(public messageService: MessageService) {}
 
-  ngOnInit(): void {
-    setTimeout(() => this.staticAlertClosed = true, 10000);
+  ngOnInit() {
+    
   }
   
 }
