@@ -1,18 +1,45 @@
+<div class="container-fluid">
+  <ngb-carousel>
+    <ng-template ngbSlide class="carousel-item">
+      <img class="img-fluid" src="../../assets/img/2.jpg" alt="Random first slide">
+      <div class="carousel-caption d-none d-md-block" style="color:black">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide class="carousel-item">
+      <img class="img-fluid" src="../../assets/img/3.jpg" alt="Random second slide">
+      <div class="carousel-caption d-none d-md-block" style="color:black">
+        <h3>Bienvenido a Onee</h3>
+        <p>Miel natural patag&oacute;nica.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide class="carousel-item">
+      <img class="img-fluid" src="../../assets/img/1.jpg" alt="Random third slide">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<hr>
 <div class="container">
-<h3 align="center">Ultimas novedades!</h3>
-<div class="row">
-    <div *ngFor="let producto of productos | slice:-4:end" class="col-md-3" >
-      <div class="card border-warning" >
-        <img class="card-img-top" src="../../assets/img/size.svg" alt="Card image cap">
+  <h3 align="center" style="font-weight: bold;">&Uacute;ltimas novedades</h3>
+
+  <div class="row">
+    <div *ngFor="let producto of productos | slice:-3:end" class="col-md-4">
+      <div class="card border-warning">
+        <img class="card-img-top" [src]=[producto.img] [alt]=[producto.name]>
         <div class="card-body">
-          <h5 class="card-title">{{producto.name}} <span class="badge badge-secondary">New</span></h5>
+          <h5 class="card-title">{{producto.name}}
+            <span class="badge badge-secondary">New</span>
+          </h5>
           <p class="card-text"></p>
-          <button type="button" class="btn btn-outline-secondary mr-3" triggers="mouseenter:mouseleave" placement="top"
-          ngbPopover="{{producto.details}}" popoverTitle="Precio: ${{producto.price}}" >
-          M&aacute;s info!
+          <button type="button" class="btn btn-outline-secondary mr-3" triggers="mouseenter:mouseleave" placement="top" ngbPopover="{{producto.details}}"
+            popoverTitle="Precio: ${{producto.price}}">
+            M&aacute;s info!
           </button>
         </div>
-      </div><br>
-    </div> 
+      </div>
+      <br>
+    </div>
   </div>
+  <button class="btn btn-info" routerLink="/view">Ver todos los productos</button>
 </div>

@@ -1,56 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+
 /* Master Styles */
+
 @import "~bootstrap/dist/css/bootstrap.css";
 
-#socialNav{
-	padding-right: 25px;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
+/*body {
+        background: url(assets/img/fondo.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+        
+    }*/
+
+#socialNav {
+  padding-right: 25px;
+}
 
 .navbar ul li {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-.navbar{
-	font-weight: 500;
-}
-.navbar-nav > li > a {
-    color: #EAB766 !important;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 
-.navbar-nav > li > a:hover {
-    color: #FFDFAD !important;
+.navbar {
+  font-weight: 500;
+}
+
+.navbar-nav>li>a {
+  color: #EAB766 !important;
+}
+
+.navbar-nav>li>a:hover {
+  color: #FFDFAD !important;
 }
 
 .fa {
-    color: #EAB766;
-    border: #EAB766;
+  color: #EAB766;
+  border: #EAB766;
 }
-.fa:hover{
-	color: #FFDFAD !important;
+
+.fa:hover {
+  color: #FFDFAD !important;
 }
-.navbar .active{
-	border-bottom: solid 1px #EAB766;
+
+.navbar .active {
+  border-bottom: solid 1px #EAB766;
 }
-a, a:hover{
-    text-decoration: none;
+
+a,
+a:hover {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 991px) {
-	#socialNav{
-		padding-bottom: 20px;
-	}
-	ul li {
-        margin-left: 12px;
-        margin-top: 10px;
-    }
-}
-button {
-    background-color:#EAB766 !important;
-    color: white !important;
-    border: none !important;
+  #socialNav {
+    padding-bottom: 20px;
   }
-  
+  ul li {
+    margin-left: 12px;
+    margin-top: 10px;
+  }
+}
+
+button {
+  background-color: #EAB766 !important;
+  color: white !important;
+  border: none !important;
+}
+
 button:hover {
-    background-color: #FFDFAD !important;
+  background-color: #FFDFAD !important;
+}
+
+h3,
+h2,
+h1,
+h4 {
+  font-family: 'Bree Serif', serif;
 }
