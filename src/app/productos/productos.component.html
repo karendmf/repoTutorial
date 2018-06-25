@@ -1,4 +1,6 @@
+<!-- ADMINISTRAR PRODUCTOS -->
 <div class="container">
+  <!-- tab navegacion al entrar a ADMINISTRAR PRODUCTOS -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
@@ -7,20 +9,23 @@
       <li class="breadcrumb-item active" aria-current="page">Administrar</li>
     </ol>
   </nav>
+
   <h2>Administrar productos</h2>
   <br>
   <div class="row">
     <div class="col-md-6">
       <!--BUSCADOR-->
       <app-producto-search></app-producto-search>
-
       <hr>
+
+      <!-- ingresar nuevo producto -->
       <h4>Nuevo producto</h4>
       <div class="form-group">
         <label for="crearNombre">Nombre: </label>
         <input class="form-control" #productoName id='crearNombre' />
       </div>
-      <!-- (click) passes input value to add() and then clears the input -->
+
+      <!-- (clicki) pasa el valor de entrada para agregar el producto y luego borra la entrada -->
       <button type="button" class="btn btn-info" (click)="add(productoName.value); productoName.value=''">
         Agregar
       </button>
@@ -28,16 +33,19 @@
       <br>
     </div>
 
+    <!-- Lista de los productos cargados. -->
     <div class="col-md-6">
       <h4>Lista de productos</h4>
       <ul class="productos list-group">
+        <!-- Se hace un recorrido de todos los productos para que se muestren en la lista -->
         <li *ngFor="let producto of productos" class="list-group-item d-flex justify-content-between align-items-center">
+          <!-- Cada producto en la lista, al ser seleccionado, redirecciona a Administrar Producto -->
           <a routerLink="/detail/{{producto.id}}">
-            <!--<span class="badge badge-warning">{{producto.id}}</span>--> {{producto.name}}
+            {{producto.name}}
           </a>
+          <!-- Cada producto tiene un boton que permite eliminar dicho producto -->
           <button class="btn btn-danger" title="Eliminar producto" (click)="delete(producto)">X</button>
-        </li>
-        
+        </li> 
       </ul>
     </div>
   </div>

@@ -1,3 +1,4 @@
+//tipo de datos que tendra la clase, se podra usar para validar formularios
 export class Producto {
     id: number;
     name: string;
@@ -5,4 +6,4 @@ export class Producto {
     price: number;
     img: string;
   }
-  //tipo de datos que tendra la clase, se podra usar para validar formularios
+  

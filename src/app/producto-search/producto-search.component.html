@@ -1,7 +1,9 @@
+<!-- BUSCAR MIEL -->
 <div>
     <h4>Buscar Miel</h4>
+    <!-- Se permite la busqueda de productos. Se busca a medida que se escribe-->
     <input class="form-control" #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
-  
+    <!-- Se muestra la lista resultado de los productos. Al seleccionar una opcion, redirecciona a administrar el producto -->
     <div class="list-group search-result">
       <a *ngFor="let producto of productos$ | async" class="list-group-item" routerLink="/detail/{{producto.id}}">
           {{producto.name}}

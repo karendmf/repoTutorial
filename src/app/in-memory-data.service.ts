@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-
+// Se cargan los productos a la base para ser mostrados.
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const productos = [

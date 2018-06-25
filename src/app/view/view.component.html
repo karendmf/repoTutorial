@@ -1,3 +1,5 @@
+<!-- VER PRODUCTOS -->
+
 <div class="container">
 <h2>Nuestras mieles</h2>
 <hr>
@@ -5,12 +7,16 @@
 <button class="btn btn-info" routerLink="/productos">Administrar productos</button>
 <br><br>
 <div class="row">
+  <!-- Recorrido de los productos.  -->
   <div *ngFor="let producto of productos" class="col-md-3" >
     <div class="card border-warning" >
+      <!-- Se inserta la imagen con un alt del nombre de la imagen -->
       <img class="card-img-top" [src]=[producto.img] [alt]=[producto.name]>
       <div class="card-body">
+        <!-- Se coloca el nombre del producto -->
         <h5 class="card-title">{{producto.name}}</h5>
         <p class="card-text"></p>
+        <!-- Boton mas info: Al pasar el cursor por el boton de Mas Info se vera informacion del producto y el precio obtenido del recorrido -->
         <button type="button" class="btn btn-outline-secondary mr-3" triggers="mouseenter:mouseleave" placement="top"
         ngbPopover="{{producto.details}}" popoverTitle="Precio: ${{producto.price}}" >
         M&aacute;s info!

@@ -1,24 +1,32 @@
+<!-- ADMINISTRAR PRODUCTOS -->
 <div class="container">
-<div *ngIf="producto">
+  <div *ngIf="producto">
+    <!-- De existir info se mostrara la informacion   -->
     <h2>{{ producto.name | uppercase }}</h2>
+    <!-- Cargar nombre del producto -->
     <div class="form-group">
       <label for="nombre">Nombre de la Miel:</label>
       <input class="form-control" [(ngModel)]="producto.name" placeholder="Ej. Miel de Trebol" id="nombre">
     </div>
+    <!-- Cargar descripcion del producto -->
     <div class="form-group">
       <label for="descripcion">Descripci&oacute;n de la Miel:</label>
       <textarea class="form-control" [(ngModel)]="producto.details" placeholder="Ej. Procedente de la flor de trébol" rows="4" id="descripcion"></textarea>
     </div>
+    <!-- Cargar precio del producto -->
     <div class="form-group">
       <label for="precio">Precio:</label>
       <input class="form-control" [(ngModel)]="producto.price" placeholder="Ej. 148" id="precio" type="number">
     </div>
+    <!-- Imagen del producto -->
     <div class="form-group">
-        <label for="img">Imagen de producto:</label>
-        <input class="form-control" type="file" [(ngModel)]="producto.img" id="img">
-      </div>
+      <label for="img">Imagen de producto:</label>
+      <input class="form-control" type="file" [(ngModel)]="producto.img" id="img">
+    </div>
+
+    <!-- Botones para guardar o regresar a la pag. anterior -->
     <button type="button" class="btn btn-info" (click)="save()">Guardar</button> &nbsp;
     <button type="button" class="btn btn-info" (click)="goBack()">Atras</button>
-    
+      
   </div>
 </div>
