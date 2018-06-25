@@ -41,7 +41,7 @@ import { FooterComponent } from './footer/footer.component';
     AppNavbarComponent,
     ViewComponent,
     NosotrosComponent,
-    FooterComponent
+    FooterComponent,
   ],
   bootstrap: [ AppComponent ]
 })

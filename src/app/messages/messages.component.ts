@@ -7,10 +7,11 @@ import { MessageService } from '../message.service';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-
+  staticAlertClosed = false;
   constructor(public messageService: MessageService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    setTimeout(() => this.staticAlertClosed = true, 10000);
   }
-
+  
 }

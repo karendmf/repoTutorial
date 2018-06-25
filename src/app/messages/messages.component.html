@@ -1,8 +1,5 @@
-<div *ngIf="messageService.messages.length">
-
-    <h2>Messages</h2>
-    <button class="clear"
-            (click)="messageService.clear()">Limpiar</button>
-    <div *ngFor='let message of messageService.messages'> {{message}} </div>
-  
+<div *ngIf="messageService.messages.length" class="alert">
+  <div *ngFor='let message of messageService.messages | slice:-1:end' [ngClass]="{ last: last }">
+    <ngb-alert *ngIf="!staticAlertClosed" (close)="messageService.clear(); staticAlertClosed = true" class='last'>{{ message }}</ngb-alert>
   </div>
+</div>

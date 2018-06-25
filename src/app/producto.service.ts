@@ -20,16 +20,16 @@ export class ProductoService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** GET heroes from the server */
+  /** GET productoes from the server */
   getProductos (): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.productosUrl)
-      .pipe(
+      /*.pipe(
         tap(productos => this.log(`fetched productos`)),
         catchError(this.handleError('getProductos', []))
-      );
+      );*/
   }
 
-  /** GET hero by id. Return `undefined` when id not found */
+  /** GET producto by id. Return `undefined` when id not found */
   getProductoNo404<Data>(id: number): Observable<Producto> {
     const url = `${this.productosUrl}/?id=${id}`;
     return this.http.get<Producto[]>(url)
@@ -43,30 +43,30 @@ export class ProductoService {
       );
   }
 
-  /** GET hero by id. Will 404 if id not found */
+  /** GET producto by id. Will 404 if id not found */
   getProducto(id: number): Observable<Producto> {
     const url = `${this.productosUrl}/${id}`;
-    return this.http.get<Producto>(url).pipe(
+    return this.http.get<Producto>(url)/*.pipe(
       tap(_ => this.log(`fetched producto id=${id}`)),
       catchError(this.handleError<Producto>(`getProducto id=${id}`))
-    );
+    )*/;
   }
 
-  /* GET heroes whose name contains search term */
+  /* GET productoes whose name contains search term */
   searchProductos(term: string): Observable<Producto[]> {
     if (!term.trim()) {
-      // if not search term, return empty hero array.
+      // if not search term, return empty producto array.
       return of([]);
     }
-    return this.http.get<Producto[]>(`${this.productosUrl}/?name=${term}`).pipe(
+    return this.http.get<Producto[]>(`${this.productosUrl}/?name=${term}`)/*.pipe(
       tap(_ => this.log(`found productos matching "${term}"`)),
       catchError(this.handleError<Producto[]>('searchProductos', []))
-    );
+    )*/;
   }
 
   //////// Save methods //////////
 
-  /** POST: add a new hero to the server */
+  /** POST: add a new producto to the server */
   addProducto (producto: Producto): Observable<Producto> {
     return this.http.post<Producto>(this.productosUrl, producto, httpOptions).pipe(
       tap((producto: Producto) => this.log(`Nuevo producto agregado: ${producto.name}`)),
@@ -74,7 +74,7 @@ export class ProductoService {
     );
   }
 
-  /** DELETE: delete the hero from the server */
+  /** DELETE: delete the producto from the server */
   deleteProducto (producto: Producto | number): Observable<Producto> {
     const id = typeof producto === 'number' ? producto : producto.id;
     const url = `${this.productosUrl}/${id}`;
@@ -85,10 +85,10 @@ export class ProductoService {
     );
   }
 
-  /** PUT: update the hero on the server */
+  /** PUT: update the producto on the server */
   updateProducto (producto: Producto): Observable<any> {
     return this.http.put(this.productosUrl, producto, httpOptions).pipe(
-      tap(_ => this.log(`Producto actualizado id: ${producto.id}`)),
+      tap(_ => this.log(`Producto actualizado: ${producto.name}`)),
       catchError(this.handleError<any>('updateProducto'))
     );
   }
@@ -113,8 +113,8 @@ export class ProductoService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a productoService message with the MessageService */
   private log(message: string) {
-    this.messageService.add('ProductoService: ' + message);
+    this.messageService.add(message);
   }
 }
