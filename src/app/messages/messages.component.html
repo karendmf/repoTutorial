@@ -1,5 +1,7 @@
+<!-- Si el array de messageService tiene elementos, se listan los elementos. Con "slice:-1:end" nos seguramos que solo se muestre el ultimo elemento. -->
 <div *ngIf="messageService.messages.length" class="alert">
   <div *ngFor='let message of messageService.messages | slice:-1:end'>
+    <!-- cuando cerramos el alerta, limpiamos el array con la funcion clear() -->
     <ngb-alert (close)="messageService.clear();">{{ message }}</ngb-alert>
   </div>
 </div>
