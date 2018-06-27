@@ -19,13 +19,13 @@
       <hr>
 
       <!-- ingresar nuevo producto -->
-      <h4>Nuevo producto</h4>
+      <h3>Nuevo producto</h3>
       <div class="form-group">
         <label for="crearNombre">Nombre: </label>
         <input class="form-control" #productoName id='crearNombre' />
       </div>
 
-      <!-- (clicki) pasa el valor de entrada para agregar el producto y luego borra la entrada -->
+      <!-- (click) pasa el valor de entrada para agregar el producto y luego borra la entrada -->
       <button type="button" class="btn btn-info" (click)="add(productoName.value); productoName.value=''">
         Agregar
       </button>
@@ -35,11 +35,11 @@
 
     <!-- Lista de los productos cargados. -->
     <div class="col-md-6">
-      <h4>Lista de productos</h4>
+      <h3>Lista de productos</h3>
       <ul class="productos list-group">
         <!-- Se hace un recorrido de todos los productos para que se muestren en la lista -->
         <li *ngFor="let producto of productos" class="list-group-item d-flex justify-content-between align-items-center">
-          <!-- Cada producto en la lista, al ser seleccionado, redirecciona a Administrar Producto -->
+          <!-- Cada producto en la lista, al ser seleccionado, redirecciona a Administrar Producto Especifico -->
           <a routerLink="/detail/{{producto.id}}">
             {{producto.name}}
           </a>
