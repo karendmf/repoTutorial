@@ -12,7 +12,7 @@ export class MessagesComponent implements OnInit {
 
   ngOnInit():void {
     //Despues de un determinado tiempo, se ejecuta la funcion "clear()" del servicio message, haciendo que el array vuelva a vacio.
-    setInterval(()=>this.messageService.clear(), 15000);
+    setInterval(()=>this.messageService.clear(), 9000);
   }
   
 }
